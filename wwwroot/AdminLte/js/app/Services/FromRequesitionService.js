@@ -1,0 +1,10 @@
+﻿var FromRequesitionService = function () {
+
+   
+    return {
+        
+    }
+
+
+
+}();

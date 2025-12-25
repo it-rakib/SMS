@@ -1,0 +1,19 @@
+﻿@model SMS.Models.Purchase
+
+<h2>Delete Purchase</h2>
+
+<div class="alert alert-danger">
+    Are you sure you want to delete this purchase?
+</div>
+
+<ul>
+    <li><strong>Supplier:</strong> @Model.SupplierName</li>
+    <li><strong>Date:</strong> @Model.PurchaseDate?.ToString("dd-MMM-yyyy")</li>
+    <li><strong>Total:</strong> @Model.TotalAmount?.ToString("0.00")</li>
+</ul>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="PurchaseId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

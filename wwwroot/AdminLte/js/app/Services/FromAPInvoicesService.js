@@ -1,0 +1,10 @@
+﻿var FromAPInvoicesService = function () {
+
+
+    return {
+
+    }
+
+
+
+}();

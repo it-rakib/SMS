@@ -1,0 +1,33 @@
+﻿@model SMS.Models.Sale
+
+<h2>Sale Details</h2>
+
+<div class="mb-3">
+    <strong>Supplier:</strong> @Model.CustomerName <br />
+    <strong>Date:</strong> @Model.SaleDate?.ToString("dd-MMM-yyyy") <br />
+    <strong>Total:</strong> @Model.TotalAmount?.ToString("0.00")
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var d in Model.SaleDetails)
+        {
+            <tr>
+                <td>@d.Product?.ProductName</td>
+                <td>@d.Quantity</td>
+                <td>@d.UnitPrice?.ToString("0.00")</td>
+                <td>@d.TotalPrice?.ToString("0.00")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Back</a>

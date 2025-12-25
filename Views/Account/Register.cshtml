@@ -1,0 +1,42 @@
+﻿@model SMS.ViewModels.RegisterVM
+
+<h2>Register</h2>
+
+<form asp-action="Register" method="post">
+    <div class="mb-3">
+        <label>Full Name</label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" type="email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Password</label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Confirm Password</label>
+        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Role</label>
+        <input asp-for="Role" class="form-control" placeholder="Admin/User (optional)" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Register</button>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="text-danger mt-2">@ViewBag.Error</div>
+    }
+
+    @if (ViewBag.Success != null)
+    {
+        <div class="text-success mt-2">@ViewBag.Success</div>
+    }
+</form>

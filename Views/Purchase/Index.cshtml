@@ -1,0 +1,40 @@
+﻿@model IEnumerable<dynamic>
+
+<h2>Purchase List</h2>
+
+<a asp-action="Create" class="btn btn-success mb-3">
+    <i class="fas fa-plus"></i> New Purchase
+</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Supplier</th>
+            <th>Total Amount</th>
+            <th>Items</th>
+            <th width="220">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PurchaseDate?.ToString("dd-MMM-yyyy")</td>
+                <td>@item.SupplierName</td>
+                <td>@item.TotalAmount?.ToString("0.00")</td>
+                <td>@item.TotalItems</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.PurchaseId"
+                       class="btn btn-info btn-sm">Details</a>
+
+                    <a asp-action="Edit" asp-route-id="@item.PurchaseId"
+                       class="btn btn-primary btn-sm">Edit</a>
+
+                    <a asp-action="Delete" asp-route-id="@item.PurchaseId"
+                       class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

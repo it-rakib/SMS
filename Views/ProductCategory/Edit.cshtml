@@ -1,0 +1,20 @@
+﻿@model SMS.Models.ProductCategory
+
+<h2>Edit Product Category</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="CategoryId" />
+
+    <div class="mb-3">
+        <label>Category Name</label>
+        <input asp-for="CategoryName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Is Active</label>
+        <input asp-for="IsActive" type="checkbox" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,59 @@
+﻿@model SMS.ViewModels.DashboardVM
+
+<h3 class="mb-3">
+    Welcome, @ViewBag.UserName 👋
+</h3>
+
+<div class="row">
+
+    <div class="col-lg-6 col-6">
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>@Model.TodayPurchase.ToString("0.00")</h3>
+                <p>Today's Purchase</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-6">
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>@Model.TodaySale.ToString("0.00")</h3>
+                <p>Today's Sale</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-cash-register"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6 col-6">
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h3>@Model.TotalProducts</h3>
+                <p>Total Products</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-boxes"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-6">
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h3>@Model.OutOfStock</h3>
+                <p>Out of Stock</p>
+            </div>
+            <div class="icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,103 @@
+﻿@model SMS.Models.Purchase
+@{
+    ViewData["Title"] = "Create Purchase";
+}
+
+<h2>Create Purchase</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Supplier Name</label>
+        <input asp-for="SupplierName" class="form-control" />
+    </div>
+
+    <h4>Purchase Items</h4>
+
+    <table class="table table-bordered" id="detailsTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th width="100">Qty</th>
+                <th width="130">Unit Price</th>
+                <th width="130">Total</th>
+                <th width="50"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select name="details[0].ProductId" class="form-control">
+                        <option value="">--Select--</option>
+                        @foreach (var p in ViewBag.Products)
+                        {
+                            <option value="@p.Value">@p.Text</option>
+                        }
+                    </select>
+                </td>
+                <td>
+                    <input name="details[0].Quantity" class="form-control qty" type="number" value="1" />
+                </td>
+                <td>
+                    <input name="details[0].UnitPrice" class="form-control price" type="number" step="0.01" />
+                </td>
+                <td>
+                    <input name="details[0].TotalPrice" class="form-control total" readonly />
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger remove">×</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary mb-2" id="addRow">
+        + Add Item
+    </button>
+
+    <div class="form-group mt-2">
+        <label>Total Amount</label>
+        <input id="TotalAmount" name="TotalAmount" class="form-control" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+</form>
+
+@section scripts {
+    <script>
+        function recalc() {
+            let sum = 0;
+            $('#detailsTable tbody tr').each(function () {
+                let qty = parseFloat($(this).find('.qty').val()) || 0;
+                let price = parseFloat($(this).find('.price').val()) || 0;
+                let total = qty * price;
+                $(this).find('.total').val(total.toFixed(2));
+                sum += total;
+            });
+            $('#TotalAmount').val(sum.toFixed(2));
+        }
+
+        $('#detailsTable').on('input', '.qty,.price', recalc);
+
+        $('#addRow').click(function () {
+            let idx = $('#detailsTable tbody tr').length;
+            let row = $('#detailsTable tbody tr:first').clone();
+            row.find('input,select').val('');
+            row.find('.qty').val(1);
+
+            row.find('input,select').each(function () {
+                let name = $(this).attr('name');
+                $(this).attr('name', name.replace(/\d+/, idx));
+            });
+
+            $('#detailsTable tbody').append(row);
+        });
+
+        $('#detailsTable').on('click', '.remove', function () {
+            if ($('#detailsTable tbody tr').length > 1) {
+                $(this).closest('tr').remove();
+                recalc();
+            }
+        });
+    </script>
+}
