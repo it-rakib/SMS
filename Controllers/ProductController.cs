@@ -18,7 +18,8 @@ namespace SMS.Controllers
         public IActionResult Index()
         {
             var products = _context.Products
-            .Select(p => new {
+            .Select(p => new
+            {
                 p.ProductId,
                 p.ProductName,
                 CategoryName = p.Category != null ? p.Category.CategoryName : "N/A",
@@ -33,10 +34,19 @@ namespace SMS.Controllers
         // GET: Create form
         public IActionResult Create()
         {
-            ViewBag.Categories = new SelectList(_context.ProductCategories.Where(c => c.IsActive == true), "CategoryId", "CategoryName");
-            var product = new Product(); // <-- Create empty model instance
-            return View(product);
-        }
+            var categories = _context.ProductCategories
+                .Where(c => c.IsActive)
+                .Select(c => new
+                {
+                    c.CategoryId,
+                    c.CategoryName
+                })
+                .ToList();
+
+            ViewBag.Categories = new SelectList(categories, "CategoryId", "CategoryName");
+
+            return View(new Product());
+        }        
 
         // POST: Create
         [HttpPost]

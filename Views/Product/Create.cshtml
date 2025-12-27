@@ -13,8 +13,11 @@
 
     <div class="mb-3">
         <label>Category</label>
-        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+            <option value="">-- Select Category --</option>
+        </select>
     </div>
+
 
     <div class="mb-3">
         <label>Sale Price</label>

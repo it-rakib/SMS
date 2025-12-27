@@ -16,10 +16,6 @@
     @*<link rel="stylesheet" href="~/css/bootstrap4-toggle.min.css">*@
 
 
-    <!--Kendo CSS-->
-    <link href="~/assets/kendoui2021/kendo/style/kendo.common.min.css" rel="stylesheet" />
-    <link href="~/assets/kendoui2021/kendo/style/kendo.blueopal.min.css" rel="stylesheet" />
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="~/AdminLte/plugins/fontawesome-free/css/all.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
@@ -168,6 +164,10 @@
     }
 </style>
 
+@{
+        var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -241,57 +241,62 @@
             </a>
 
             <!-- Sidebar -->
-            <div class="sidebar">
-                
+            <div class="sidebar">               
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2" id="partialViewContainer">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item menu-open">
-                            <a href="/Dashboard/Index" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="/Dashboard/Index"
+                               class="nav-link @(currentController == "Dashboard" ? "active" : "")">
                                 <i class="nav-icon fa fa-home"></i>
                                 <p>Home</p>
                             </a>
                         </li>
                         
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item @(currentController == "Product" || currentController == "ProductCategory" ? "menu-open" : "")">
+                            <a href="#" class="nav-link @(currentController == "Product" || currentController == "ProductCategory" ? "active" : "")">
                                 <i class="nav-icon fas fa-sliders-h"></i>
                                 <p>
                                     Settings
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
+                            <ul class="nav nav-treeview">                               
+
                                 <li class="nav-item">
-                                    <a href="/Product/Index" class="nav-link">
-                                        <i class="nav-icon fas fa-box"></i>
-                                        <p>Products</p>
+                                    <a href="/ProductCategory/Index"
+                                       class="nav-link @(currentController == "ProductCategory" ? "active" : "")">
+                                        <i class="nav-icon fas fa-tags"></i>
+                                        <p>Product Category</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/ProductCategory/Index" class="nav-link">
-                                        <i class="nav-icon fas fa-tags"></i>
-                                        <p>Product Category</p>
+                                    <a href="/Product/Index"
+                                       class="nav-link @(currentController == "Product" ? "active" : "")">
+                                        <i class="nav-icon fas fa-box"></i>
+                                        <p>Products</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="/Purchase/Index" class="nav-link">
+                            <a href="/Purchase/Index"
+                               class="nav-link @(currentController == "Purchase" ? "active" : "")">
                                 <i class="nav-icon fas fa-cart-plus"></i>
                                 <p>Purchase</p>
-                            </a>                            
+                            </a>
                         </li>
 
+
                         <li class="nav-item">
-                            <a href="/Sale/Index" class="nav-link">
+                            <a href="/Sale/Index"
+                               class="nav-link @(currentController == "Sale" ? "active" : "")">
                                 <i class="nav-icon fas fa-dollar-sign"></i>
-                                <p>
-                                    Sales
-                                </p>
+                                <p>Sales</p>
                             </a>
-                        </li>                        
+                        </li>
+
 
                     </ul>
                 </nav>

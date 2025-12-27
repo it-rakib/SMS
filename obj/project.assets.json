@@ -10234,11 +10234,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SMS\\SMS.csproj",
+      "projectUniqueName": "D:\\Projects\\SMS\\SMS.csproj",
       "projectName": "SMS",
-      "projectPath": "D:\\SMS\\SMS.csproj",
+      "projectPath": "D:\\Projects\\SMS\\SMS.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\SMS\\obj\\",
+      "outputPath": "D:\\Projects\\SMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

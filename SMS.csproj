@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\assets\kendoUI2021\**" />
+    <Compile Remove="wwwroot\assets\KendoUI\**" />
+    <Compile Remove="wwwroot\assets\kendo\**" />
+    <Content Remove="wwwroot\assets\kendoUI2021\**" />
+    <Content Remove="wwwroot\assets\KendoUI\**" />
+    <Content Remove="wwwroot\assets\kendo\**" />
+    <EmbeddedResource Remove="wwwroot\assets\kendoUI2021\**" />
+    <EmbeddedResource Remove="wwwroot\assets\KendoUI\**" />
+    <EmbeddedResource Remove="wwwroot\assets\kendo\**" />
+    <None Remove="wwwroot\assets\kendoUI2021\**" />
+    <None Remove="wwwroot\assets\KendoUI\**" />
+    <None Remove="wwwroot\assets\kendo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Scafold.txt" />
   </ItemGroup>
 
