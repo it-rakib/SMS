@@ -25,13 +25,37 @@
         .error {
             color: red;
         }
+
+        height: auto; /* Allow content to determine height */
+        padding: 20px 0; /* Space for title + logo */
+        text-align: center;
+}
+
+    .card-header h2 {
+        font-size: 24px;
+        color: #343a40;
+        margin-bottom: 10px; /* Space between title and logo */
+    }
+
+    .logo {
+        width: 150px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+
     </style>
 }
 
 <div class="login-box" style="margin-top:-102px;">
     <div class="card">
-        <div class="card-header text-center" style="height: 164px;">
-            <a >
+        <div class="card-header text-center" style="height:auto; padding:20px;">
+
+            <!-- Title: Shop Management System -->
+            <p class="mb-2" style="font-weight:bold;">Shop Management System</p>
+
+            <!-- Logo -->
+            <a>
                 <img src="~/assets/img/Shop.jpg" class="logo" alt="Logo" />
             </a>
         </div>
@@ -65,7 +89,6 @@
                     </div>
                 </div>
 
-
                 <!-- Submit Button -->
                 <div class="row justify-content-center">
                     <div class="col-4">
@@ -80,46 +103,7 @@
                         </a>
                     </div>
                 </div>
-
             }
         </div>
     </div>
 </div>
-<style>
-    .logo {
-        width: 150px;
-        height: auto;
-    }
-</style>
-
-
-
-
-
-@* @model SMS.ViewModels.LoginVM
-
-@{
-    ViewData["Title"] = "Login";
-}
-
-<h2>Login</h2>
-
-<form asp-action="Login" method="post">
-    <div class="mb-3">
-        <label>Email</label>
-        <input asp-for="Email" class="form-control" />
-    </div>
-
-    <div class="mb-3">
-        <label>Password</label>
-        <input asp-for="Password" type="password" class="form-control" />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Login</button>
-
-    @if (ViewBag.Error != null)
-    {
-        <div class="text-danger mt-2">@ViewBag.Error</div>
-    }
-</form>
- *@

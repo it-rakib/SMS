@@ -16,10 +16,17 @@
             padding-top: 50px;
         }
 
+        h {
+            font-size: 17px;
+            color: #343a40;
+            margin-bottom: 10px; /* Space between title and logo */
+        }
+
         .logo {
             width: 150px;
-            height: 200px;
-            margin-bottom: 20px;
+            height: 135px !important;
+            display: block;
+            margin: auto;
         }
 
         .error {
@@ -30,7 +37,12 @@
 
 <div class="login-box" style="margin-top:-102px;">
     <div class="card">
-        <div class="card-header text-center">
+        <div class="card-header text-center" style="height:auto; padding:20px;">
+
+            <!-- Title: Shop Management System -->
+            <h class="mb-2" style="font-weight:bold;">SHOP MANAGEMENT SYSTEM</h>
+
+            <!-- Logo -->
             <a>
                 <img src="~/assets/img/Shop.jpg" class="logo" alt="Logo" />
             </a>
@@ -38,6 +50,7 @@
 
         <div class="card-body login-card-body">
             <p class="login-box-msg">Sign in to start your session</p>
+
 
             @using (Html.BeginForm("Login", "Account", FormMethod.Post))
             {
@@ -65,7 +78,6 @@
                     </div>
                 </div>
 
-
                 <!-- Submit Button -->
                 <div class="row justify-content-center">
                     <div class="col-4">
@@ -80,17 +92,10 @@
                         </a>
                     </div>
                 </div>
-
             }
         </div>
     </div>
 </div>
-<style>
-    .logo {
-        width: 150px;
-        height: auto;
-    }
-</style>
 
 
 
