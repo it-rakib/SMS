@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using SMS.Models;
 
 namespace SMS.Models
 {
@@ -23,6 +24,7 @@ namespace SMS.Models
         public virtual DbSet<Sale> Sales { get; set; } = null!;
         public virtual DbSet<SaleDetail> SaleDetails { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<MonthlyInventoryReport> MonthlyInventoryReports { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -115,6 +117,7 @@ namespace SMS.Models
 
                 entity.Property(e => e.IsActive).HasDefaultValueSql("((1))");
             });
+            modelBuilder.Entity<MonthlyInventoryReport>().HasNoKey();
 
             OnModelCreatingPartial(modelBuilder);
         }

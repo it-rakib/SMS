@@ -738,11 +738,15 @@ D:\Projects\SMS\obj\Debug\net6.0\SMS.AssemblyInfoInputs.cache
 D:\Projects\SMS\obj\Debug\net6.0\SMS.AssemblyInfo.cs
 D:\Projects\SMS\obj\Debug\net6.0\SMS.csproj.CoreCompileInputs.cache
 D:\Projects\SMS\obj\Debug\net6.0\SMS.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\SMS\obj\Debug\net6.0\SMS.RazorAssemblyInfo.cache
+D:\Projects\SMS\obj\Debug\net6.0\SMS.RazorAssemblyInfo.cs
 D:\Projects\SMS\obj\Debug\net6.0\SMS.sourcelink.json
 D:\Projects\SMS\obj\Debug\net6.0\rjimswa.dswa.cache.json
 D:\Projects\SMS\obj\Debug\net6.0\rjsmrazor.dswa.cache.json
 D:\Projects\SMS\obj\Debug\net6.0\rjsmcshtml.dswa.cache.json
+D:\Projects\SMS\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Projects\SMS\obj\Debug\net6.0\scopedcss\bundle\SMS.styles.css
+D:\Projects\SMS\obj\Debug\net6.0\scopedcss\projectbundle\SMS.bundle.scp.css
 D:\Projects\SMS\obj\Debug\net6.0\staticwebassets.build.json
 D:\Projects\SMS\obj\Debug\net6.0\staticwebassets.build.json.cache
 D:\Projects\SMS\obj\Debug\net6.0\staticwebassets.development.json
@@ -754,7 +758,3 @@ D:\Projects\SMS\obj\Debug\net6.0\refint\SMS.dll
 D:\Projects\SMS\obj\Debug\net6.0\SMS.pdb
 D:\Projects\SMS\obj\Debug\net6.0\SMS.genruntimeconfig.cache
 D:\Projects\SMS\obj\Debug\net6.0\ref\SMS.dll
-D:\Projects\SMS\obj\Debug\net6.0\SMS.RazorAssemblyInfo.cache
-D:\Projects\SMS\obj\Debug\net6.0\SMS.RazorAssemblyInfo.cs
-D:\Projects\SMS\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\Projects\SMS\obj\Debug\net6.0\scopedcss\projectbundle\SMS.bundle.scp.css

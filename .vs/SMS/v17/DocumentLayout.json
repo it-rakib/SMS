@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projects\\SMS\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|d:\\projects\\sms\\views\\reports\\inventoryreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|solutionrelative:views\\reports\\inventoryreport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|d:\\projects\\sms\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|solutionrelative:controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|d:\\projects\\sms\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|d:\\projects\\sms\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|d:\\projects\\sms\\models\\smsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|solutionrelative:models\\smsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|d:\\projects\\sms\\models\\monthlyinventoryvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0EAEC2C7-C934-4E42-A72A-CDED0C38700D}|SMS.csproj|solutionrelative:models\\monthlyinventoryvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "D:\\Projects\\SMS\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReportsController.cs",
+              "ToolTip": "D:\\Projects\\SMS\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "Controllers\\ReportsController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T16:13:38.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Projects\\SMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Projects\\SMS\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACYBAAAAAAAAAAAAADQBAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T16:03:19.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InventoryReport.cshtml",
+              "DocumentMoniker": "D:\\Projects\\SMS\\Views\\Reports\\InventoryReport.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reports\\InventoryReport.cshtml",
+              "ToolTip": "D:\\Projects\\SMS\\Views\\Reports\\InventoryReport.cshtml",
+              "RelativeToolTip": "Views\\Reports\\InventoryReport.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-27T16:02:13.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MonthlyInventoryVM.cs",
+              "DocumentMoniker": "D:\\Projects\\SMS\\Models\\MonthlyInventoryVM.cs",
+              "RelativeDocumentMoniker": "Models\\MonthlyInventoryVM.cs",
+              "ToolTip": "D:\\Projects\\SMS\\Models\\MonthlyInventoryVM.cs",
+              "RelativeToolTip": "Models\\MonthlyInventoryVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T15:47:01.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SMSDbContext.cs",
+              "DocumentMoniker": "D:\\Projects\\SMS\\Models\\SMSDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\SMSDbContext.cs",
+              "ToolTip": "D:\\Projects\\SMS\\Models\\SMSDbContext.cs",
+              "RelativeToolTip": "Models\\SMSDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T15:38:11.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Projects\\SMS\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Projects\\SMS\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T15:34:51.987Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

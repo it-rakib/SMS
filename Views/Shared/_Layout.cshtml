@@ -296,6 +296,24 @@
                                 <p>Sales</p>
                             </a>
                         </li>
+                        <li class="nav-item @(currentController == "Reports" || currentController == "InventoryReport" ? "menu-open" : "")">
+                            <a href="#" class="nav-link @(currentController == "Reports" || currentController == "InventoryReport" ? "active" : "")">
+                                <i class="nav-icon fas fa-sliders-h"></i>
+                                <p>
+                                    Reports
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/Reports/InventoryReport"
+                                       class="nav-link @(currentController == "InventoryReport" ? "active" : "")">
+                                        <i class="nav-icon fas fa-chart-bar"></i>
+                                        <p>Inventory Report</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
 
 
                     </ul>
